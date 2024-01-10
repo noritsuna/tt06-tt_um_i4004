@@ -1,5 +1,23 @@
 `define default_netname none
 `default_nettype none
+////////////////////////////////////////////////////////////////////////
+// 
+// 4004 Counter sub-module
+// 
+// This file is part of the MCS-4 project hosted at OpenCores:
+//      http://www.opencores.org/cores/mcs-4/
+// 
+// Copyright 2012 by Reece Pollack <rrpollack@opencores.org>
+// 
+// These materials are provided under the Creative Commons
+// "Attribution-NonCommercial-ShareAlike" Public License. They
+// are NOT "public domain" and are protected by copyright.
+// 
+// This work based on materials provided by Intel Corporation and
+// others under the same license. See the file doc/License for
+// details of this license.
+//
+////////////////////////////////////////////////////////////////////////
 
 module tt_um_noritsuna_i4004 (
     input  wire [7:0] ui_in,    // Dedicated inputs
@@ -25,7 +43,7 @@ module tt_um_noritsuna_i4004 (
 	wire			cmram3_pad;
 	wire			sync_pad;
 
-//input:
+	//input:
 	assign			sysclk		=	clk;
 	assign	[3:0]		data_pad	=	ui_in[3:0];
 	assign			clk1_pad	=	ui_in[4];
@@ -33,7 +51,7 @@ module tt_um_noritsuna_i4004 (
 	assign			poc_pad		=	ui_in[6];
 	assign			test_pad	=	ui_in[7];
 
-//output:
+	//output:
 	assign			cmrom_pad	=	uo_out[0];
 	assign			cmram0_pad	=	uo_out[1];
 	assign			cmram1_pad	=	uo_out[2];

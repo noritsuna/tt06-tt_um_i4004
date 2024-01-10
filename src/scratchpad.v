@@ -1,13 +1,13 @@
-`timescale 1ns / 1ps
+`define default_netname none
 `default_nettype none
 ////////////////////////////////////////////////////////////////////////
 // 
-// 4004 Scratchpad Register Array
+// 4004 Counter sub-module
 // 
 // This file is part of the MCS-4 project hosted at OpenCores:
 //      http://www.opencores.org/cores/mcs-4/
 // 
-// Copyright © 2012 by Reece Pollack <rrpollack@opencores.org>
+// Copyright 2012 by Reece Pollack <rrpollack@opencores.org>
 // 
 // These materials are provided under the Creative Commons
 // "Attribution-NonCommercial-ShareAlike" Public License. They
