@@ -14,3 +14,4 @@ It's NOT mcs-4 system. i4004 CPU only.
 ## External hardware
 
 i4001, i4002 Emu.
+

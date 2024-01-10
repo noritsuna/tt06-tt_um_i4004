@@ -1,25 +1,5 @@
-`timescale 1ns / 1ps
-`default_nettype none
-////////////////////////////////////////////////////////////////////////
-// 
-// 4004 CPU Integration Module
-// 
-// This file is part of the MCS-4 project hosted at OpenCores:
-//      http://www.opencores.org/cores/mcs-4/
-// 
-// Copyright © 2012 by Reece Pollack <rrpollack@opencores.org>
-// 
-// These materials are provided under the Creative Commons
-// "Attribution-NonCommercial-ShareAlike" Public License. They
-// are NOT "public domain" and are protected by copyright.
-// 
-// This work based on materials provided by Intel Corporation and
-// others under the same license. See the file doc/License for
-// details of this license.
-//
-////////////////////////////////////////////////////////////////////////
-
 `define default_netname none
+`default_nettype none
 
 module tt_um_i4004 (
     input  wire [7:0] ui_in,    // Dedicated inputs
