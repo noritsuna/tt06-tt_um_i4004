@@ -45,7 +45,7 @@ module tt_um_noritsuna_i4004 (
 
 	//input:
 	assign			sysclk		=	clk;
-	assign	[3:0]		data_pad	=	ui_in[3:0];
+	assign			data_pad	=	ui_in[3:0];
 	assign			clk1_pad	=	ui_in[4];
 	assign			clk2_pad	=	ui_in[5];
 	assign			poc_pad		=	ui_in[6];
