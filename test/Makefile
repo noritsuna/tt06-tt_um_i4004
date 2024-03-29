@@ -5,7 +5,7 @@
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = tt_um_noritsuna_i4004.v
+PROJECT_SOURCES = tt_um_noritsuna_i4004.v alu.v counter.v instruction_decode.v instruction_pointer.v scratchpad.v timing_io.v
 
 ifneq ($(GATES),yes)
 
