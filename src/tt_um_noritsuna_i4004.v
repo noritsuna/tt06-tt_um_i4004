@@ -60,14 +60,14 @@ module tt_um_noritsuna_i4004 (
 	assign			cmram3_pad	=	uo_out[4];
 	assign			sync_pad	=	uo_out[5];
 
-	assign uio_oe[3:0]  = 1;
-	assign			data_out_pad	=	uio_in[3:0];
+	assign			uio_oe[3:0]	=	1;
+	assign			data_out_pad[3:0]=	uio_in[3:0];
 
 
 	// All output pins must be assigned. If not used, assign to 0.
 	assign uo_out[6]  = 0;
 	assign uo_out[7]  = 0;
-	assign uio_out[7:4] = 0;
+	assign uio_out[7:0] = 0;
 	assign uio_oe[7:4]  = 0;
 
 
