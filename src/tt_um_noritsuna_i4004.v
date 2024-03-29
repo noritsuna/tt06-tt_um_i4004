@@ -35,7 +35,8 @@ module tt_um_noritsuna_i4004 (
 	wire			clk2_pad;
 	wire			poc_pad;
 	wire			test_pad;
-	wire	[3:0]		data_pad;
+	wire	[3:0]		data_in_pad;
+	wire	[3:0]		data_out_pad;
 	wire			cmrom_pad;
 	wire			cmram0_pad;
 	wire			cmram1_pad;
@@ -45,7 +46,7 @@ module tt_um_noritsuna_i4004 (
 
 	//input:
 	assign			sysclk		=	clk;
-	assign			data_pad	=	ui_in[3:0];
+	assign			data_in_pad	=	ui_in[3:0];
 	assign			clk1_pad	=	ui_in[4];
 	assign			clk2_pad	=	ui_in[5];
 	assign			poc_pad		=	ui_in[6];
@@ -59,11 +60,15 @@ module tt_um_noritsuna_i4004 (
 	assign			cmram3_pad	=	uo_out[4];
 	assign			sync_pad	=	uo_out[5];
 
+	assign uio_oe[3:0]  = 1;
+	assign			data_out_pad	=	uio_in[3:0];
+
+
 	// All output pins must be assigned. If not used, assign to 0.
 	assign uo_out[6]  = 0;
 	assign uo_out[7]  = 0;
-	assign uio_out = 0;
-	assign uio_oe  = 0;
+	assign uio_out[7:4] = 0;
+	assign uio_oe[7:4]  = 0;
 
 
 
@@ -154,7 +159,8 @@ module tt_um_noritsuna_i4004 (
 		.gate(gate), 
 		.poc(poc), 
 		.data(data), 
-		.data_pad(data_pad), 
+		.data_in_pad(data_in_pad), 
+		.data_out_pad(data_out_pad), 
 		.test_pad(test_pad), 
 		.n0432(n0432), 
 		.sync_pad(sync_pad), 

@@ -42,7 +42,8 @@ module timing_io(
 	
 	// External I/O Pad conditioning
 	inout  wire	[3:0]	data,
-	inout  wire [3:0]	data_pad,
+	inout  wire [3:0]	data_in_pad,
+	output wire [3:0] 	data_out_pad,
 	input  wire			test_pad,
 	output reg			n0432,
 	output reg			sync_pad,
@@ -144,7 +145,7 @@ module timing_io(
 		if (n0659)		data_in = 4'b1111;
 		else if (n0676)	data_in = 4'bzzzz;
 		else if (poc)	data_in = 4'b0000;
-		else 			data_in = data_pad;
+		else 			data_in = data_in_pad;
 	end
 	assign data = data_in;
 
@@ -154,6 +155,7 @@ module timing_io(
 		if (n0702)
 			data_out <= data;
 	end
-	assign data_pad = poc ? 4'b0000 : (n0700 ? 4'bzzzz : data_out);
+	assign data_out_pad = poc ? 4'b0000 : (n0700 ? 4'bzzzz : data_out);
+	assign data_in_pad = poc ? 4'b0000 : (n0700 ? 4'bzzzz : data_out);
 
 endmodule
